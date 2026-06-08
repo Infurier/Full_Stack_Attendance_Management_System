@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Attendance Management - Frontend</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Attendance Management</h1>
+    <nav>
+      <button id="nav-login">Login</button>
+      <button id="nav-students">Students</button>
+      <button id="nav-attendance">Attendance</button>
+      <button id="nav-health">Health</button>
+      <button id="btn-logout" style="display:none">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="panel-login" class="panel">
+      <h2>Login</h2>
+      <label>Username <input id="login-username" /></label>
+      <label>Password <input id="login-password" type="password" /></label>
+      <button id="btn-login">Login</button>
+      <div id="login-message" class="message"></div>
+    </section>
+
+    <section id="panel-students" class="panel" style="display:none">
+      <h2>Students</h2>
+      <div class="controls">
+        <input id="student-name" placeholder="Name" />
+        <input id="student-roll" placeholder="Roll Number" />
+        <button id="btn-add-student">Add</button>
+      </div>
+      <ul id="students-list"></ul>
+      <div id="students-message" class="message"></div>
+    </section>
+
+    <section id="panel-attendance" class="panel" style="display:none">
+      <h2>Attendance</h2>
+      <div class="controls">
+        <select id="att-student-select"></select>
+        <input id="att-date" type="date" />
+        <label><input id="att-present" type="checkbox" /> Present</label>
+        <button id="btn-mark-att">Mark/Update</button>
+      </div>
+      <div class="controls">
+        <input id="att-filter-date" type="date" />
+        <button id="btn-load-att">Load</button>
+      </div>
+      <ul id="attendance-list"></ul>
+      <div id="attendance-message" class="message"></div>
+    </section>
+
+    <section id="panel-health" class="panel" style="display:none">
+      <h2>Server Health</h2>
+      <button id="btn-check-health">Check Health</button>
+      <pre id="health-output"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
